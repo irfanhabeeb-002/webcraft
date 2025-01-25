@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Soccer City</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* Header and Navbar Styles */
+        header {
+            background-color: #0b2336;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            flex-wrap: wrap;
+        }
+
+        h1, h2, .button {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #FFC107;
+        }
+
+        /* Main Section Styles */
+        main {
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #FFC107;
+            font-family: 'Orbitron', sans-serif;
+            color: #000;
+            padding: 15px 25px;
+            margin: 10px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #FFA000;
+            transform: scale(1.1);
+        }
+
+        /* Login Section */
+        .login-container {
+            background-color: #ffffff;
+            color: #000;
+            padding: 30px;
+            max-width: 400px;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .login-container h3 {
+            margin: 0 0 20px;
+            font-size: 1.5rem;
+            color: #4CAF50;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .login-container label {
+            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .login-container button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-container button:hover {
+            background-color: #45A049;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #2196F3;
+            padding: 20px 10px;
+            text-align: center;
+            color: #fff;
+        }
+
+        footer a {
+            color: #FFC107;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hide Sections by Default */
+        #game, #login {
+            display: none;
+        }
+
+        #game {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px;  
+    padding: 20px;
+}
+
+
+.game-item {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    padding: 20px;
+    text-align: center;
+    width: 250px;  
+    height: auto;  
+}
+
+
+
+
+.game-item img {
+    width: 100%;  /* Make the image fill its container */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.game-item h3 {
+    font-size: 1.6rem;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 10px;
+}
+
+.game-item p {
+    font-size: 1rem;
+    font-family: 'Rajdhani', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <img src="C:\Users\ASUS\OneDrive\Desktop\coding\football\assets\WhatsApp Image 2025-01-25 at 11.10.05_f6332c38.jpg" alt="Football Logo">
+            <h1>Soccer City</h1>
+        </div>
+        <ul>
+            <li><a href="javascript:void(0)" onclick="showSection('home')">Home</a></li>
+            <li><a href="javascript:void(0)" onclick="showSection('login')">Login</a></li>
+            <li><a href="javascript:void(0)" onclick="showSection('game')">View Game</a></li>
+            <li><a href="javascript:void(0)" onclick="alert('Reviews coming soon!')">View Reviews</a></li>
+            <li><a href="javascript:void(0)" onclick="alert('Leaderboard coming soon!')">Leaderboard</a></li>
+        </ul>
+    </div>
+</header>
+
+<main id="home">
+    <h2>Welcome to Soccer City!</h2>
+    <p>Choose an option to get started:</p>
+    <button class="button" onclick="showSection('game')">View Game</button>
+    <button class="button" onclick="showSection('login')">Login</button>
+    <button class="button" onclick="alert('Reviews coming soon!')">View Reviews</button>
+    <button class="button" onclick="alert('Leaderboard coming soon!')">View Leaderboard</button>
+</main>
+
+<section id="game">
+    <div style="text-align: center;">
+        <h2>Popular Football Games</h2>
+    </div>
+
+    <div class="game-item">
+        <img src="http://t0.gstatic.com/images?q=tbn:ANd9GcRgKlUOnUbg4dw2vZU2Dsd4heehwtr7dFJInAsDO_wPsGYRuIu6" alt="FIFA">
+        <h3>FIFA</h3>
+        <p>One of the most popular football video games, known for its realistic graphics and gameplay.</p>
+    </div>
+
+    <div class="game-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAnfigp5dadWEcGkTYJzTfLAQ-TSlRbVxaCz0EOy2fJcMW-w1-" alt="eFootball">
+        <h3>eFootball</h3>
+        <p>Konami's football game, offering an immersive experience with regular updates and improvements.</p>
+    </div>
+
+    <div class="game-item">
+        <img src="https://img.utdstc.com/icon/4b6/ed3/4b6ed3082c308b6312fbf2a403db157126447ac101d04a3a06f5c66d013425a7:200" alt="Dream League Soccer">
+        <h3>Dream League Soccer</h3>
+        <p>Famous mobile football game with a deep player customization system and engaging gameplay.</p>
+    </div>
+
+    <div class="game-item">
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Captain_Tsubasa_%28Mega_CD%29.jpg" alt="Captain Tsubasa">
+        <h3>Captain Tsubasa</h3>
+        <p>Captain Tsubasa is a 1994 video game released by Tecmo for the Sega Mega-CD, based on the popular Captain Tsubasa manga/anime series.</p>
+    </div>
+</section>
+
+<!-- Login Section -->
+<section id="login">
+    <div class="login-container">
+        <h3>Login</h3>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Soccer City | All Rights Reserved</p>
+</footer>
+
+<script>
+    // Toggle visibility of sections
+    function showSection(sectionId) {
+        // Hide all sections
+        document.getElementById('home').style.display = 'none';
+        document.getElementById('game').style.display = 'none';
+        document.getElementById('login').style.display = 'none';
+
+        // Show the selected section
+        document.getElementById(sectionId).style.display = 'block';
+    }
+
+    // Initially show the home section
+    window.onload = function() {
+        showSection('home');
+    };
+</script>
+
+</body>
+</html>
